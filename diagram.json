@@ -1,0 +1,209 @@
+{
+    "version": 1,
+    "author": "Smart Biometric EVM",
+    "editor": "wokwi",
+    "parts": [
+        {
+            "type": "wokwi-esp32-devkit-v1",
+            "id": "esp",
+            "top": 0,
+            "left": 0,
+            "attrs": {}
+        },
+        {
+            "type": "wokwi-lcd1602",
+            "id": "lcd1",
+            "top": -100,
+            "left": 300,
+            "attrs": {
+                "pins": "i2c"
+            }
+        },
+        {
+            "type": "wokwi-pushbutton",
+            "id": "verifyBtn",
+            "top": 160,
+            "left": 300,
+            "attrs": {
+                "color": "green",
+                "label": "VERIFY"
+            }
+        },
+        {
+            "type": "wokwi-pushbutton",
+            "id": "candidateABtn",
+            "top": 220,
+            "left": 300,
+            "attrs": {
+                "color": "blue",
+                "label": "CANDIDATE A"
+            }
+        },
+        {
+            "type": "wokwi-pushbutton",
+            "id": "candidateBBtn",
+            "top": 280,
+            "left": 300,
+            "attrs": {
+                "color": "blue",
+                "label": "CANDIDATE B"
+            }
+        },
+        {
+            "type": "wokwi-pushbutton",
+            "id": "candidateCBtn",
+            "top": 340,
+            "left": 300,
+            "attrs": {
+                "color": "blue",
+                "label": "CANDIDATE C"
+            }
+        },
+        {
+            "type": "wokwi-pushbutton",
+            "id": "confirmBtn",
+            "top": 400,
+            "left": 300,
+            "attrs": {
+                "color": "yellow",
+                "label": "CONFIRM"
+            }
+        },
+        {
+            "type": "wokwi-pushbutton",
+            "id": "saveBtn",
+            "top": 460,
+            "left": 300,
+            "attrs": {
+                "color": "green",
+                "label": "SAVE"
+            }
+        },
+        {
+            "type": "wokwi-pushbutton",
+            "id": "resetBtn",
+            "top": 520,
+            "left": 300,
+            "attrs": {
+                "color": "red",
+                "label": "RESET"
+            }
+        }
+    ],
+    "connections": [
+        [
+            "esp:VIN",
+            "lcd1:VCC",
+            "red",
+            []
+        ],
+        [
+            "esp:GND.1",
+            "lcd1:GND",
+            "black",
+            []
+        ],
+        [
+            "esp:D21",
+            "lcd1:SDA",
+            "green",
+            []
+        ],
+        [
+            "esp:D22",
+            "lcd1:SCL",
+            "blue",
+            []
+        ],
+        [
+            "esp:D13",
+            "verifyBtn:1.l",
+            "green",
+            []
+        ],
+        [
+            "verifyBtn:2.l",
+            "esp:GND.1",
+            "black",
+            []
+        ],
+        [
+            "esp:D14",
+            "candidateABtn:1.l",
+            "blue",
+            []
+        ],
+        [
+            "candidateABtn:2.l",
+            "esp:GND.1",
+            "black",
+            []
+        ],
+        [
+            "esp:D26",
+            "candidateBBtn:1.l",
+            "blue",
+            []
+        ],
+        [
+            "candidateBBtn:2.l",
+            "esp:GND.1",
+            "black",
+            []
+        ],
+        [
+            "esp:D32",
+            "candidateCBtn:1.l",
+            "blue",
+            []
+        ],
+        [
+            "candidateCBtn:2.l",
+            "esp:GND.1",
+            "black",
+            []
+        ],
+        [
+            "esp:D27",
+            "confirmBtn:1.l",
+            "yellow",
+            []
+        ],
+        [
+            "confirmBtn:2.l",
+            "esp:GND.1",
+            "black",
+            []
+        ],
+        [
+            "esp:D25",
+            "saveBtn:1.l",
+            "green",
+            []
+        ],
+        [
+            "saveBtn:2.l",
+            "esp:GND.1",
+            "black",
+            []
+        ],
+        [
+            "esp:D33",
+            "resetBtn:1.l",
+            "red",
+            []
+        ],
+        [
+            "resetBtn:2.l",
+            "esp:GND.1",
+            "black",
+            []
+        ]
+    ],
+    "serialMonitor": {
+        "display": "always",
+        "newline": "lf",
+        "convertEol": true
+    },
+    "dependencies": {}
+}
