@@ -1,5 +1,7 @@
 # Smart Biometric EVM — IoT Voting Simulation
 
+![Smart Biometric EVM circuit diagram](image.png)
+
 A software-based **Smart Electronic Voting Machine (EVM)** prototype built using **ESP32, Arduino C++, Wokwi, an I²C LCD, virtual push buttons, and ThingSpeak**.
 
 The project demonstrates a simulated voting workflow, voter ID validation, duplicate-vote prevention, local vote counting, and cloud-based publication of aggregate voting results.
